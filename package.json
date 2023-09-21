@@ -1,0 +1,17 @@
+{
+  "name": "chirp-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "build:scss": "sass src/scss/styles.scss dist/styles.css",
+    "build:ts": "tsc",
+    "build": "npm run build:scss && npm run build:ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.68.0",
+    "typescript": "^5.2.2"
+  }
+}
