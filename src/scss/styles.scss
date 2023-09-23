@@ -2,51 +2,20 @@
 $isabelline: #fbf8f3;
 $celestial-blue: #1DA1F2;
 $cerulean: #1F7898;
-$black: #000000;
 $gray: #7E7E7D;
 $light-cyan: #d7f5f5;
-$white: #ffffff;
 
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     width: 100vw;
 }
-.landing {
-    background-color: $isabelline;
-}
 
-.navigation-items {
-    display: flex;
-    justify-content: flex-end;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    em {
-        color: $celestial-blue;
-        font-weight: 700;
-    }
-
-    ul {
-        display: flex;
-        list-style-type: none;
-
-        li {
-            margin-right: 1rem;
-            color: $gray;
-        }
-    }
-}
-
-button {
+#twitter-button {
     display: flex;
     align-items: center;
     background-color: $celestial-blue;
-    color: $white;
+    color: white;
     border: none;
     border-radius: 4px;
     padding: 0.5rem 1rem;
@@ -59,50 +28,69 @@ button {
     }
 }
 
-.wrapper {
-    display: flex;
-    justify-content: space-between;
+.landing-container {
+    background-color: $isabelline;
 
-}
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        em {
+            color: $celestial-blue;
+            font-weight: 700;
+        }
+    
+        ul {
+            display: flex;
+            list-style-type: none;
+    
+            li {
+                margin-right: 1rem;
+                color: $gray;
+            }
+        }
 
-.content {
-h1 {
-    margin-bottom: 0;
-}
-
-p {
-    margin-top: 0;
-}
-
-.cta {
-    display: flex;
-    align-items: center;
-
-    a {
-        color: $cerulean;
-        font-weight: 700;
-        text-decoration: none;
-    }
-
-    button {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-
-        img {
-            margin-right: 5px;
+        .navigation-items {
+            display: flex;
+            justify-content: flex-end;
         }
     }
-}
 
-.avatars {
-    display: flex;
-    img:not(:first-child) {
-        position: relative;
-        margin-left: -16px;
+    .introduction {
+        display: flex;
+        justify-content: space-between;
+        
+        .cta {
+            display: flex;
+            align-items: center;
+        
+            a {
+                color: $cerulean;
+                font-weight: 700;
+                text-decoration: none;
+            }
+        
+            button {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        
+                img {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .avatars {
+            display: flex;
+            img:not(:first-child) {
+                position: relative;
+                margin-left: -16px;
+            }
+        }
+        
     }
-}
-
     .stats {
         margin-top: 10px;
         
@@ -110,10 +98,8 @@ p {
             color: $cerulean;
         }
     }
-}
 
-.hero-image {
-    img {
+    #hero-image {
         max-width: 25vw;
         height: auto;
     }
@@ -138,74 +124,72 @@ p {
     }
 }
 
-.tweets-container {
+.testimonials-container {
     background-color: $light-cyan;
     padding: 20px;
     justify-content: space-between;
 
-    h2 {
-        margin-bottom: 20px;
-    }
     .tweets-grid{
         display:flex;
-    }
-    .tweet {
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        padding: 15px;
-        border-radius: 5px;
-        width: auto;
 
-
-        img.avatar {
-            width: 40px;
-            height: 40px;
-        }
-
-        h6,
-        p.handle {
-            margin: 0;
-        }
-
-        .user-info {
+        .tweet {
             display: flex;
-            align-items: center;
-
-        p.handle {
-            margin-left: 10px;
-            color: $gray;
-        }
-
-        img.twitter-logo {
+            flex-direction: column;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
             width: auto;
+    
+    
+            img.avatar {
+                width: 40px;
+                height: 40px;
+            }
+    
+            h6,
+            p.handle {
+                margin: 0;
+            }
+    
+            .user-info {
+                display: flex;
+                align-items: center;
+    
+            p.handle {
+                margin-left: 10px;
+                color: $gray;
+            }
+    
+            img.twitter-logo {
+                width: auto;
+            }
         }
-    }
-
-        p.tweet-content {
-            margin-top: 10px;
-            color: $gray;
-        }
-
-        .tweet-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: $gray;
-
-            img.like-icon {
-                margin-right: 5px;
+    
+            p.tweet-content {
+                margin-top: 10px;
+                color: $gray;
+            }
+    
+            .tweet-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: $gray;
+    
+                img.like-icon {
+                    margin-right: 5px;
+                }
             }
         }
     }
 }
 
-.price-section {
-    .price-plan {
+.pricing-container {
+    .pricing-header {
         text-align: center;
     }
 
-    .price-container {
+    .pricing-plan {
     display: flex;
     flex-direction: column;
     background-color: $isabelline;
@@ -231,6 +215,7 @@ p {
 
     hr {
         border-color: $gray;
+        width: 100%;
     }
 
     ul {
@@ -247,23 +232,8 @@ p {
     margin-right: 10px;
     }
 
-    button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $celestial-blue;
-    color: $white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 20px;
-    width: 100%;
-    }
+}
 
-    button img {
-    margin-right: 10px;
-    }
-    }
 footer {
     display: flex;
     justify-content: space-between;

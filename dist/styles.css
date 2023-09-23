@@ -5,46 +5,7 @@ body {
   width: 100vw;
 }
 
-.landing {
-  background-color: #fbf8f3;
-}
-
-.navigation-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-nav em {
-  color: #1DA1F2;
-  font-weight: 700;
-}
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-}
-nav ul li {
-  margin-right: 1rem;
-  color: #7E7E7D;
-}
-
-button {
+#twitter-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,19 +13,55 @@ button {
       -ms-flex-align: center;
           align-items: center;
   background-color: #1DA1F2;
-  color: #ffffff;
+  color: white;
   border: none;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
-button img {
+#twitter-button img {
   width: 20px;
   height: 20px;
   margin-right: 0.5rem;
 }
 
-.wrapper {
+.landing-container {
+  background-color: #fbf8f3;
+}
+.landing-container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.landing-container nav em {
+  color: #1DA1F2;
+  font-weight: 700;
+}
+.landing-container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+.landing-container nav ul li {
+  margin-right: 1rem;
+  color: #7E7E7D;
+}
+.landing-container nav .navigation-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.landing-container .introduction {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,14 +69,7 @@ button img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
-.content h1 {
-  margin-bottom: 0;
-}
-.content p {
-  margin-top: 0;
-}
-.content .cta {
+.landing-container .introduction .cta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,12 +77,12 @@ button img {
       -ms-flex-align: center;
           align-items: center;
 }
-.content .cta a {
+.landing-container .introduction .cta a {
   color: #1F7898;
   font-weight: 700;
   text-decoration: none;
 }
-.content .cta button {
+.landing-container .introduction .cta button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,26 +91,25 @@ button img {
           align-items: center;
   margin-right: 10px;
 }
-.content .cta button img {
+.landing-container .introduction .cta button img {
   margin-right: 5px;
 }
-.content .avatars {
+.landing-container .introduction .avatars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.content .avatars img:not(:first-child) {
+.landing-container .introduction .avatars img:not(:first-child) {
   position: relative;
   margin-left: -16px;
 }
-.content .stats {
+.landing-container .stats {
   margin-top: 10px;
 }
-.content .stats strong {
+.landing-container .stats strong {
   color: #1F7898;
 }
-
-.hero-image img {
+.landing-container #hero-image {
   max-width: 25vw;
   height: auto;
 }
@@ -147,22 +136,19 @@ button img {
   color: #7E7E7D;
 }
 
-.tweets-container {
+.testimonials-container {
   background-color: #d7f5f5;
   padding: 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.tweets-container h2 {
-  margin-bottom: 20px;
-}
-.tweets-container .tweets-grid {
+.testimonials-container .tweets-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.tweets-container .tweet {
+.testimonials-container .tweets-grid .tweet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,15 +161,15 @@ button img {
   border-radius: 5px;
   width: auto;
 }
-.tweets-container .tweet img.avatar {
+.testimonials-container .tweets-grid .tweet img.avatar {
   width: 40px;
   height: 40px;
 }
-.tweets-container .tweet h6,
-.tweets-container .tweet p.handle {
+.testimonials-container .tweets-grid .tweet h6,
+.testimonials-container .tweets-grid .tweet p.handle {
   margin: 0;
 }
-.tweets-container .tweet .user-info {
+.testimonials-container .tweets-grid .tweet .user-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,18 +177,18 @@ button img {
       -ms-flex-align: center;
           align-items: center;
 }
-.tweets-container .tweet .user-info p.handle {
+.testimonials-container .tweets-grid .tweet .user-info p.handle {
   margin-left: 10px;
   color: #7E7E7D;
 }
-.tweets-container .tweet .user-info img.twitter-logo {
+.testimonials-container .tweets-grid .tweet .user-info img.twitter-logo {
   width: auto;
 }
-.tweets-container .tweet p.tweet-content {
+.testimonials-container .tweets-grid .tweet p.tweet-content {
   margin-top: 10px;
   color: #7E7E7D;
 }
-.tweets-container .tweet .tweet-footer {
+.testimonials-container .tweets-grid .tweet .tweet-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,14 +200,14 @@ button img {
           align-items: center;
   color: #7E7E7D;
 }
-.tweets-container .tweet .tweet-footer img.like-icon {
+.testimonials-container .tweets-grid .tweet .tweet-footer img.like-icon {
   margin-right: 5px;
 }
 
-.price-section .price-plan {
+.pricing-container .pricing-header {
   text-align: center;
 }
-.price-section .price-container {
+.pricing-container .pricing-plan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,51 +222,31 @@ button img {
   margin: 0 auto;
   border-radius: 4px;
 }
-.price-section span {
+.pricing-container span {
   color: gray;
 }
-.price-section strong {
+.pricing-container strong {
   font-size: 32px;
 }
-.price-section .price {
+.pricing-container .price {
   font-size: 24px;
   color: #7E7E7D;
 }
-.price-section hr {
+.pricing-container hr {
   border-color: #7E7E7D;
+  width: 100%;
 }
-.price-section ul {
+.pricing-container ul {
   list-style: none;
   padding: 0;
 }
-.price-section li {
+.pricing-container li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
 }
-.price-section li img {
-  margin-right: 10px;
-}
-.price-section button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #1DA1F2;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-top: 20px;
-  width: 100%;
-}
-.price-section button img {
+.pricing-container li img {
   margin-right: 10px;
 }
 
