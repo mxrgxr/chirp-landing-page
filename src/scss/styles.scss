@@ -58,3 +58,233 @@ button {
         margin-right: 0.5rem;
     }
 }
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.content {
+h1 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+
+    a {
+        color: $cerulean;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    button {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+
+        img {
+            margin-right: 5px;
+        }
+    }
+}
+
+.avatars {
+    display: flex;
+    img:not(:first-child) {
+        position: relative;
+        margin-left: -16px;
+    }
+}
+
+    .stats {
+        margin-top: 10px;
+        
+        strong {
+            color: $cerulean;
+        }
+    }
+}
+
+.hero-image {
+    img {
+        max-width: 25vw;
+        height: auto;
+    }
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+
+    .feature {
+        display: flex;
+        flex-direction: column;
+        border: lightgray solid;
+        border-radius: 4px;
+        border-width: 1px;
+
+        p {
+            color: $gray;
+        }
+    }
+}
+
+.tweets-container {
+    background-color: $light-cyan;
+    padding: 20px;
+    justify-content: space-between;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+    .tweets-grid{
+        display:flex;
+    }
+    .tweet {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 15px;
+        border-radius: 5px;
+        width: auto;
+
+
+        img.avatar {
+            width: 40px;
+            height: 40px;
+        }
+
+        h6,
+        p.handle {
+            margin: 0;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+
+        p.handle {
+            margin-left: 10px;
+            color: $gray;
+        }
+
+        img.twitter-logo {
+            width: auto;
+        }
+    }
+
+        p.tweet-content {
+            margin-top: 10px;
+            color: $gray;
+        }
+
+        .tweet-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $gray;
+
+            img.like-icon {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.price-section {
+    .price-plan {
+        text-align: center;
+    }
+
+    .price-container {
+    display: flex;
+    flex-direction: column;
+    background-color: $isabelline;
+    border: 2px solid #eccf9c;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 4px;
+    }
+
+    span {
+        color: gray;
+    }
+
+    strong {
+        font-size: 32px;
+    }
+
+    .price {
+    font-size: 24px;
+    color: $gray;
+    }
+
+    hr {
+        border-color: $gray;
+    }
+
+    ul {
+    list-style: none;
+    padding: 0;
+    }
+
+    li {
+    display: flex;
+    margin-bottom: 10px;
+    }
+
+    li img {
+    margin-right: 10px;
+    }
+
+    button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $celestial-blue;
+    color: $white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    }
+
+    button img {
+    margin-right: 10px;
+    }
+    }
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: $light-cyan;
+
+    p {
+        margin: 0;
+        font-weight: bold;
+        color: $celestial-blue;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+        margin-left: 20px;
+        }
+    }
+}

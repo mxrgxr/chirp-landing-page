@@ -63,3 +63,253 @@ button img {
   height: 20px;
   margin-right: 0.5rem;
 }
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content h1 {
+  margin-bottom: 0;
+}
+.content p {
+  margin-top: 0;
+}
+.content .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content .cta a {
+  color: #1F7898;
+  font-weight: 700;
+  text-decoration: none;
+}
+.content .cta button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+.content .cta button img {
+  margin-right: 5px;
+}
+.content .avatars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.content .avatars img:not(:first-child) {
+  position: relative;
+  margin-left: -16px;
+}
+.content .stats {
+  margin-top: 10px;
+}
+.content .stats strong {
+  color: #1F7898;
+}
+
+.hero-image img {
+  max-width: 25vw;
+  height: auto;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.features-container .feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: lightgray solid;
+  border-radius: 4px;
+  border-width: 1px;
+}
+.features-container .feature p {
+  color: #7E7E7D;
+}
+
+.tweets-container {
+  background-color: #d7f5f5;
+  padding: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.tweets-container h2 {
+  margin-bottom: 20px;
+}
+.tweets-container .tweets-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tweets-container .tweet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  width: auto;
+}
+.tweets-container .tweet img.avatar {
+  width: 40px;
+  height: 40px;
+}
+.tweets-container .tweet h6,
+.tweets-container .tweet p.handle {
+  margin: 0;
+}
+.tweets-container .tweet .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tweets-container .tweet .user-info p.handle {
+  margin-left: 10px;
+  color: #7E7E7D;
+}
+.tweets-container .tweet .user-info img.twitter-logo {
+  width: auto;
+}
+.tweets-container .tweet p.tweet-content {
+  margin-top: 10px;
+  color: #7E7E7D;
+}
+.tweets-container .tweet .tweet-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #7E7E7D;
+}
+.tweets-container .tweet .tweet-footer img.like-icon {
+  margin-right: 5px;
+}
+
+.price-section .price-plan {
+  text-align: center;
+}
+.price-section .price-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fbf8f3;
+  border: 2px solid #eccf9c;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+.price-section span {
+  color: gray;
+}
+.price-section strong {
+  font-size: 32px;
+}
+.price-section .price {
+  font-size: 24px;
+  color: #7E7E7D;
+}
+.price-section hr {
+  border-color: #7E7E7D;
+}
+.price-section ul {
+  list-style: none;
+  padding: 0;
+}
+.price-section li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+.price-section li img {
+  margin-right: 10px;
+}
+.price-section button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1DA1F2;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+.price-section button img {
+  margin-right: 10px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  background-color: #d7f5f5;
+}
+footer p {
+  margin: 0;
+  font-weight: bold;
+  color: #1DA1F2;
+}
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer ul li {
+  margin-left: 20px;
+}
