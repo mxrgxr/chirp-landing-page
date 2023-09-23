@@ -2,31 +2,34 @@
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
-  width: 100vw;
 }
 
-#twitter-button {
+.twitter-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #1DA1F2;
   color: white;
+  padding: 1rem;
   border: none;
   border-radius: 4px;
-  padding: 0.5rem 1rem;
   cursor: pointer;
+  font-weight: 700;
 }
-#twitter-button img {
-  width: 20px;
-  height: 20px;
+.twitter-button img {
+  width: 1rem;
   margin-right: 0.5rem;
 }
 
 .landing-container {
   background-color: #fbf8f3;
+  height: 75vh;
 }
 .landing-container nav {
   display: -webkit-box;
@@ -35,6 +38,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 2rem 8rem 2rem 8rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -50,7 +54,7 @@ body {
   list-style-type: none;
 }
 .landing-container nav ul li {
-  margin-right: 1rem;
+  margin-right: 2rem;
   color: #7E7E7D;
 }
 .landing-container nav .navigation-items {
@@ -61,15 +65,25 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.landing-container .introduction {
+.landing-container .landing-frame {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding: 0rem 8rem 2rem 8rem;
 }
-.landing-container .introduction .cta {
+.landing-container .landing-frame .introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.landing-container .landing-frame .introduction p {
+  color: #7E7E7D;
+}
+.landing-container .landing-frame .introduction .cta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,50 +91,50 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.landing-container .introduction .cta a {
+.landing-container .landing-frame .introduction .cta a {
   color: #1F7898;
   font-weight: 700;
   text-decoration: none;
+  margin-left: 1rem;
 }
-.landing-container .introduction .cta button {
+.landing-container .landing-frame .introduction .avatars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 10px;
+  margin-top: 1rem;
 }
-.landing-container .introduction .cta button img {
-  margin-right: 5px;
-}
-.landing-container .introduction .avatars {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.landing-container .introduction .avatars img:not(:first-child) {
+.landing-container .landing-frame .introduction .avatars img:not(:first-child) {
   position: relative;
   margin-left: -16px;
 }
-.landing-container .stats {
-  margin-top: 10px;
-}
-.landing-container .stats strong {
+.landing-container .landing-frame .stats strong {
   color: #1F7898;
 }
-.landing-container #hero-image {
-  max-width: 25vw;
-  height: auto;
+.landing-container .landing-frame #hero-image {
+  max-height: 60vh;
+  margin-left: 2rem;
 }
 
 .features-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 8rem 2.5rem 8rem;
+}
+.features-container h4 {
+  margin: 0.5rem 0;
+}
+.features-container .features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 1rem;
 }
-.features-container .feature {
+.features-container .features-grid .feature {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,22 +145,32 @@ body {
   border: lightgray solid;
   border-radius: 4px;
   border-width: 1px;
+  padding: 0.5rem;
 }
-.features-container .feature p {
+.features-container .features-grid .feature #emoji {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+.features-container .features-grid .feature p {
   color: #7E7E7D;
+  margin-top: 0;
 }
 
 .testimonials-container {
   background-color: #d7f5f5;
-  padding: 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 2rem 8rem;
+}
+.testimonials-container h2 {
+  margin: 0 0 2rem 0;
 }
 .testimonials-container .tweets-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  grid-gap: 2rem;
 }
 .testimonials-container .tweets-grid .tweet {
   display: -webkit-box;
@@ -159,15 +183,21 @@ body {
   background-color: white;
   padding: 15px;
   border-radius: 5px;
-  width: auto;
+  width: 33rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .testimonials-container .tweets-grid .tweet img.avatar {
-  width: 40px;
-  height: 40px;
+  width: 3rem;
 }
-.testimonials-container .tweets-grid .tweet h6,
-.testimonials-container .tweets-grid .tweet p.handle {
-  margin: 0;
+.testimonials-container .tweets-grid .tweet .tweet-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .testimonials-container .tweets-grid .tweet .user-info {
   display: -webkit-box;
@@ -176,16 +206,28 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.5rem;
 }
-.testimonials-container .tweets-grid .tweet .user-info p.handle {
-  margin-left: 10px;
+.testimonials-container .tweets-grid .tweet .user-info h6, .testimonials-container .tweets-grid .tweet .user-info p {
+  margin: 0;
+}
+.testimonials-container .tweets-grid .tweet .user-info h6 {
+  font-size: 1rem;
+}
+.testimonials-container .tweets-grid .tweet .user-info .identifiers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.testimonials-container .tweets-grid .tweet .user-info .identifiers p.handle {
   color: #7E7E7D;
-}
-.testimonials-container .tweets-grid .tweet .user-info img.twitter-logo {
-  width: auto;
+  font-size: 0.75rem;
 }
 .testimonials-container .tweets-grid .tweet p.tweet-content {
-  margin-top: 10px;
   color: #7E7E7D;
 }
 .testimonials-container .tweets-grid .tweet .tweet-footer {
@@ -200,12 +242,25 @@ body {
           align-items: center;
   color: #7E7E7D;
 }
-.testimonials-container .tweets-grid .tweet .tweet-footer img.like-icon {
-  margin-right: 5px;
+.testimonials-container .tweets-grid .tweet .tweet-footer .likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
 }
 
+.pricing-container {
+  padding: 2.5rem 8rem;
+}
+.pricing-container h2 {
+  margin: 0;
+}
 .pricing-container .pricing-header {
   text-align: center;
+  margin-bottom: 2.5rem;
+}
+.pricing-container .pricing-header p {
+  color: #7E7E7D;
 }
 .pricing-container .pricing-plan {
   display: -webkit-box;
@@ -217,36 +272,37 @@ body {
           flex-direction: column;
   background-color: #fbf8f3;
   border: 2px solid #eccf9c;
-  padding: 20px;
-  width: 300px;
+  padding: 1rem;
+  width: 25rem;
   margin: 0 auto;
   border-radius: 4px;
 }
-.pricing-container span {
+.pricing-container .pricing-plan .plan {
+  margin: 1rem 0;
+}
+.pricing-container .pricing-plan .plan span {
   color: gray;
 }
-.pricing-container strong {
-  font-size: 32px;
+.pricing-container .pricing-plan .plan strong {
+  font-size: 2rem;
 }
-.pricing-container .price {
-  font-size: 24px;
-  color: #7E7E7D;
-}
-.pricing-container hr {
-  border-color: #7E7E7D;
+.pricing-container .pricing-plan hr {
+  border: none;
+  height: 1px;
+  background-color: lightgray;
   width: 100%;
 }
-.pricing-container ul {
+.pricing-container .pricing-plan ul {
   list-style: none;
   padding: 0;
 }
-.pricing-container li {
+.pricing-container .pricing-plan ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 10px;
+  gap: 0.5rem;
 }
-.pricing-container li img {
+.pricing-container .pricing-plan ul li img {
   margin-right: 10px;
 }
 
@@ -260,10 +316,10 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
   background-color: #d7f5f5;
+  padding: 1rem 8rem 1rem 8rem;
 }
-footer p {
+footer em {
   margin: 0;
   font-weight: bold;
   color: #1DA1F2;

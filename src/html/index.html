@@ -17,7 +17,7 @@
                         <li>Pricing</li>
                         <li>FAQ</li>
                     </ul>
-                    <button id="twitter-button">
+                    <button class="twitter-button">
                         <img src="/assets/logos/Twitter.svg" alt="Twitter Logo">
                         Sign in with Twitter
                     </button>
@@ -31,7 +31,7 @@
                         which tweets they like, and most importantly, when they are the most active on Twitter.
                     </p>
                     <div class="cta">
-                        <button id="twitter-button">
+                        <button class="twitter-button">
                             <img src="/assets/logos/Twitter.svg" alt="Twitter Logo">
                             Sign in with Twitter
                         </button>
@@ -57,9 +57,9 @@
         </div>
         <div class="features-container">
             <h2>Features that help you Tweet smarter.</h2>
-            <div class="features-grid"></div>
+            <div class="features-grid">
                 <div class="feature">
-                    &#x1F4C8;
+                    <p id="emoji">&#x1F4C8;</p>
                     <h4>Analytics</h4>
                     <p>
                         We constantly monitor your audience as it grows - so you can tweet when your
@@ -67,15 +67,15 @@
                     </p>
                 </div>
                 <div class="feature">
-                    &#x1F913;
+                    <p id="emoji">&#x1F913;</p>
                     <h4>Smart Analyzer</h4>
                     <p>
                         Chirp automatically recognizes your followers most active times and
-                        automaticallv sends vou notitications if you're missing out on an opportunity.
+                        automatically sends vou notitications if you're missing out on an opportunity.
                     </p>
                 </div>
                 <div class="feature">
-                    &#x1F5DE;
+                    <p id="emoji">&#x1F5DE;</p>
                     <h4>Schedule Your Tweets</h4>
                     <p>
                         Quality tweets drive tons of engagement. With Chirp, you can write tweets
@@ -83,7 +83,7 @@
                     </p>
                 </div>
                 <div class="feature">
-                    &#x1F505;
+                    <p id="emoji">&#x1F505;</p>
                     <h4>Dark Mode</h4>
                     <p>
                         Friendly on the eyes, no matter what time you write your Tweets.
@@ -96,15 +96,19 @@
             <h2>What our customers say</h2>
             <div class="tweets-grid">
                 <div class="tweet">
-                    <div class="user-info">
-                        <img class="avatar" src="/assets/images/userAvatar01.svg" alt="Avatar">
-                        <h6>Sara May</h6>
-                        <p class="handle">@sara_may</p>
+                    <div class="tweet-header">
+                        <div class="user-info">
+                            <img class="avatar" src="/assets/images/userAvatar01.svg" alt="Avatar">
+                            <div class="identifiers">
+                                <h6>Sara May</h6>
+                                <p class="handle">@sara_may</p>
+                            </div>
+                        </div>
                         <img class="twitter-logo" src="/assets/logos/Twitter (Blue).svg" alt="Twitter Logo">
                     </div>
                     <p class="tweet-content">I just tried out @chirp and it's amazing, love all the analytics I can see.</p>
                     <div class="tweet-footer">
-                        <div>
+                        <div class="likes">
                             <img class="like-icon" src="/assets/icons/Like.svg" alt="Like Button">
                             <p>2</p>
                         </div>
@@ -112,10 +116,14 @@
                     </div>
                 </div>
                 <div class="tweet">
-                    <div class="user-info">
-                        <img src="/assets/images/userAvatar07.svg" alt="Avatar">
-                        <h6>Jack Scott</h6>
-                        <p class="handle">@jackscott_</p>
+                    <div class="tweet-header">
+                        <div class="user-info">
+                            <img class="avatar" src="/assets/images/userAvatar07.svg" alt="Avatar">
+                            <div class="identifiers">
+                                <h6>Jack Scott</h6>
+                                <p class="handle">@jackscott_</p>
+                            </div>
+                        </div>
                         <img class="twitter-logo" src="/assets/logos/Twitter (Blue).svg" alt="Twitter Logo">
                     </div>
                     <p class="tweet-content">
@@ -123,22 +131,30 @@
                         but after having tried it out for a few weeks, I can genuinely say this changed my Twitter game.
                     </p>
                     <div class="tweet-footer">
-                        <img src="/assets/icons/Like.svg" alt="Like Button">
-                        <p>32</p>
+                        <div class="likes">
+                            <img src="/assets/icons/Like.svg" alt="Like Button">
+                            <p>32</p>
+                        </div>
                         <p>March 2, 2021</p>
                     </div>
                 </div>
                 <div class="tweet">
-                    <div class="user-info">
-                        <img src="/assets/images/userAvatar08.svg" alt="Avatar">
-                        <h6>Jessica May</h6>
-                        <p class="handle">@jmay98</p>
+                    <div class="tweet-header">
+                        <div class="user-info">
+                            <img class="avatar"  src="/assets/images/userAvatar08.svg" alt="Avatar">
+                            <div class="identifiers">
+                                <h6>Jessica May</h6>
+                                <p class="handle">@jmay98</p>
+                            </div>
+                        </div>
                         <img class="twitter-logo" src="/assets/logos/Twitter (Blue).svg" alt="Twitter Logo">
                     </div>
                     <p class="tweet-content">Absolutely love everything about Chirp, from the design to how everything works smoothly.</p>
                     <div class="tweet-footer">
-                        <img src="/assets/icons/Like.svg" alt="Like Button">
-                        <p>221</p>
+                        <div class="likes">
+                            <img src="/assets/icons/Like.svg" alt="Like Button">
+                            <p>221</p>
+                        </div>
                         <p>March 2, 2021</p>
                     </div>
                 </div>
@@ -146,11 +162,13 @@
         </div>
         </div>
         <div class="pricing-container">
-            <h2 class="pricing-header">One simple price plan.</h2>
-            <p class="pricing-header">Start growing your Twitter account by analyzing your follower's patterns.</p>
+            <div class="pricing-header">
+                <h2>One simple price plan.</h2>
+                <p>Start growing your Twitter account by analyzing your follower's patterns.</p>
+            </div>
             <div class="pricing-plan">
                 <p class="plan">
-                    Monthly
+                    <span>Monthly</span>
                     <br />
                     <strong>$9</strong><span>/mo</span>
                 </p>
@@ -170,14 +188,14 @@
                     </li>
                 </ul>
                 <hr />
-                <button id="twitter-button">
+                <button class="twitter-button">
                     <img src="/assets/logos/Twitter.svg" alt="Twitter Logo">
                     Start Trial with Twitter
                 </button>
             </div>
         </div>
         <footer>
-            <p>Chirp.</p>
+            <em>Chirp.</em>
             <ul>
                 <img src="/assets/logos/Twitter (Black).svg" alt="Twitter Logo">
                 <li>Privacy Policy</li>
