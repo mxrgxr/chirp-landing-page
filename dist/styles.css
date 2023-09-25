@@ -29,7 +29,7 @@ body {
 
 .landing-container {
   background-color: #fbf8f3;
-  height: 75vh;
+  height: auto;
 }
 .landing-container nav {
   display: -webkit-box;
@@ -42,6 +42,17 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.landing-container nav #hamburger-icon {
+  display: none;
+}
+@media (max-width: 480px) {
+  .landing-container nav .navigation-items ul, .landing-container nav .navigation-items .twitter-button {
+    display: none;
+  }
+  .landing-container nav #hamburger-icon {
+    display: block;
+  }
 }
 .landing-container nav em {
   color: #1DA1F2;
@@ -71,6 +82,14 @@ body {
   display: flex;
   padding: 0rem 8rem 2rem 8rem;
 }
+@media (max-width: 768px) {
+  .landing-container .landing-frame {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
 .landing-container .landing-frame .introduction {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,6 +116,14 @@ body {
   text-decoration: none;
   margin-left: 1rem;
 }
+@media (max-width: 480px) {
+  .landing-container .landing-frame .introduction .cta {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .landing-container .landing-frame .introduction .avatars {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,10 +141,14 @@ body {
   max-height: 60vh;
   margin-left: 2rem;
 }
+@media (max-width: 480px) {
+  .landing-container .landing-frame #hero-image-desktop {
+    margin-left: 0;
+  }
+}
 .landing-container .landing-frame #hero-image-tablet {
   display: none;
   max-height: 60vh;
-  margin-left: 2rem;
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .landing-container .landing-frame #hero-image-desktop {
@@ -146,6 +177,11 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 1rem;
+}
+@media (max-width: 768px) {
+  .features-container .features-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .features-container .features-grid .feature {
   display: -webkit-box;
