@@ -102,7 +102,40 @@ body {
         .navigation-items {
             display: flex;
             justify-content: flex-end;
-        }
+          }
+          
+          @media #{$mobile} {
+            .navigation-items {
+              display: none;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              background-color: white;
+              width: 100%;
+              flex-direction: column;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+          
+            .navigation-items.show {
+              display: flex;
+            }
+          
+            .navigation-items ul {
+              display: flex;
+              flex-direction: column;
+              padding: 0;
+            }
+          
+            .navigation-items ul li {
+              margin-right: 0;
+              padding: 1rem;
+            }
+          
+            .navigation-items .twitter-button {
+              width: 100%;
+              margin: 0;
+            }
+          }
     }
 
     .landing-frame {

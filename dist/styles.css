@@ -114,6 +114,45 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+@media (max-width: 480px) {
+  .landing-container nav .navigation-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .landing-container nav .navigation-items.show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .landing-container nav .navigation-items ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  .landing-container nav .navigation-items ul li {
+    margin-right: 0;
+    padding: 1rem;
+  }
+  .landing-container nav .navigation-items .twitter-button {
+    width: 100%;
+    margin: 0;
+  }
+}
 .landing-container .landing-frame {
   display: -webkit-box;
   display: -ms-flexbox;
