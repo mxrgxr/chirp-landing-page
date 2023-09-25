@@ -98,9 +98,24 @@ body {
             }
         }
     
-        #hero-image {
+        #hero-image-desktop {
             max-height: 60vh;
             margin-left: 2rem;
+        }
+        
+        #hero-image-tablet {
+            display: none;
+            max-height: 60vh;
+            margin-left: 2rem;
+        }
+        
+        @media (min-width: 481px) and (max-width: 768px) {
+            #hero-image-desktop {
+                display: none;
+            }
+            #hero-image-tablet {
+                display: block;
+            }
         }
     }
 }

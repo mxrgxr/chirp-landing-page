@@ -110,9 +110,22 @@ body {
 .landing-container .landing-frame .stats strong {
   color: #1F7898;
 }
-.landing-container .landing-frame #hero-image {
+.landing-container .landing-frame #hero-image-desktop {
   max-height: 60vh;
   margin-left: 2rem;
+}
+.landing-container .landing-frame #hero-image-tablet {
+  display: none;
+  max-height: 60vh;
+  margin-left: 2rem;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .landing-container .landing-frame #hero-image-desktop {
+    display: none;
+  }
+  .landing-container .landing-frame #hero-image-tablet {
+    display: block;
+  }
 }
 
 .features-container {
