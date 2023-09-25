@@ -4,10 +4,16 @@ $celestial-blue: #1DA1F2;
 $cerulean: #1F7898;
 $gray: #7E7E7D;
 $light-cyan: #d7f5f5;
+$tablet: "(min-width: 481px) and (max-width: 768px)";
+$mobile: "(max-width: 480px)";
 
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
+
+    @media #{$mobile}{
+        font-size: 0.75rem;
+    }
 }
 
 .twitter-button {
@@ -21,6 +27,12 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-weight: 700;
+    white-space: nowrap;
+
+    @media #{$mobile} {
+        width: 100%;
+        font-size: 0.5rem
+    }
 
     img {
         width: 1rem;
@@ -37,26 +49,40 @@ body {
         align-items: center;
         padding: 2rem 8rem 2rem 8rem;
         justify-content: space-between;
-      
+
+
+        @media #{$mobile}{
+            padding: 1rem 2rem;
+            justify-content: end;
+        }
+
+        @media #{$tablet} {
+            padding: 2rem 4rem;
+            font-size: 12px;
+        }
+    
+    #hamburger-icon {
+        display: none;
+    }
+    
+    @media #{$mobile} {
+        .navigation-items {
+        ul, .twitter-button {
+            display: none;
+        }
+        }
+    
         #hamburger-icon {
-          display: none;
-        }
-      
-        @media (max-width: 480px) {
-          .navigation-items {
-            ul, .twitter-button {
-              display: none;
-            }
-          }
-      
-          #hamburger-icon {
             display: block;
-          }
         }
-        
+    }
+
         em {
             color: $celestial-blue;
             font-weight: 700;
+            @media #{$mobile}{
+                flex-grow: 1;
+            }
         }
     
         ul {
@@ -66,6 +92,10 @@ body {
             li {
                 margin-right: 2rem;
                 color: $gray;
+
+                @media #{$tablet} {
+                    margin-right: 0.5rem;
+                }
             }
         }
 
@@ -78,6 +108,14 @@ body {
     .landing-frame {
         display: flex;
         padding: 0rem 8rem 2rem 8rem;
+
+        @media #{$mobile} {
+            padding: 1rem 2rem;
+        }
+
+        @media #{$tablet} {
+            padding: 2rem 4rem;
+        }
 
         @media (max-width: 768px){
             flex-direction: column-reverse;
@@ -100,9 +138,14 @@ body {
                     font-weight: 700;
                     text-decoration: none;
                     margin-left: 1rem;
+
+                    @media #{$mobile}{
+                        margin-top: 1rem;
+                        margin-left: 0;
+                    }
                 }
 
-                @media (max-width: 480px){
+                @media #{$mobile}{
                     flex-direction: column;
                 }
             }
@@ -110,12 +153,17 @@ body {
             .avatars {
                 display: flex;
                 margin-top: 1rem;
+
+                img {
+                    @media #{$mobile} {
+                        width: 2rem;
+                    }
+                }
                 img:not(:first-child) {
                     position: relative;
                     margin-left: -16px;
                 }
             }
-            
         }
         .stats {            
             strong {
@@ -127,17 +175,18 @@ body {
             max-height: 60vh;
             margin-left: 2rem;
 
-            @media (max-width: 480px) {
+            @media #{$mobile} {
                 margin-left: 0;
+                width: 100%
             }
         }
         
         #hero-image-tablet {
             display: none;
-            max-height: 60vh;
+            max-width: 100%;
         }
         
-        @media (min-width: 481px) and (max-width: 768px) {
+        @media #{$tablet} {
             #hero-image-desktop {
                 display: none;
             }
@@ -152,6 +201,14 @@ body {
     display: flex;
     flex-direction: column;
     padding: 1rem 8rem 2.5rem 8rem;
+
+    @media #{$mobile} {
+        padding: 1rem 2rem;
+    }
+
+    @media #{$tablet} {
+        padding: 2rem 4rem;
+    }
 
     h4 {
         margin: 0.5rem 0;
@@ -192,6 +249,14 @@ body {
     justify-content: space-between;
     padding: 2rem 8rem;
 
+    @media #{$mobile} {
+        padding: 1rem 2rem;
+    }
+
+    @media #{$tablet} {
+        padding: 2rem 4rem;
+    }
+
     h2 {
         margin: 0 0 2rem 0;
     }
@@ -200,14 +265,29 @@ body {
         display:flex;
         grid-gap: 2rem;
 
+        @media #{$mobile} {
+            flex-direction: column;
+        }
+
+        @media #{$tablet} {
+            overflow-x: scroll;
+        }
+
+
         .tweet {
             display: flex;
             flex-direction: column;
             background-color: white;
             padding: 15px;
             border-radius: 5px;
-            width: 33rem;
+            width: 33%;
             height: fit-content;
+
+            @media #{$mobile} {
+                width: auto; 
+                box-sizing: border-box;
+            }
+
     
             img.avatar {
                 width: 3rem;
@@ -264,6 +344,14 @@ body {
 .pricing-container {
     padding: 2.5rem 8rem;
 
+    @media #{$mobile} {
+        padding: 1rem 2rem;
+    }
+
+    @media #{$tablet} {
+        padding: 2rem 4rem;
+    }
+
     h2 {
         margin: 0;
     }
@@ -283,9 +371,13 @@ body {
     background-color: $isabelline;
     border: 2px solid #eccf9c;
     padding: 1rem;
-    width: 25rem;
+    width: 25vw;
     margin: 0 auto;
     border-radius: 4px;
+
+    @media (max-width: 768px){
+        width: 50vw;
+    }
 
     .plan {
         margin: 1rem 0;
@@ -331,6 +423,16 @@ footer {
     background-color: $light-cyan;
     padding: 1rem 8rem 1rem 8rem;
 
+    @media #{$tablet} {
+        padding: 2rem 4rem;
+    }
+    
+    @media #{$mobile} {
+        padding: 1rem 2rem;
+        flex-direction: column;
+        align-items: self-start;
+    }
+
     em {
         margin: 0;
         font-weight: bold;
@@ -342,6 +444,10 @@ footer {
         list-style: none;
         padding: 0;
         margin: 0;
+
+        @media #{$mobile} {
+            margin-top: 1rem;
+        }
 
         li {
         margin-left: 20px;
